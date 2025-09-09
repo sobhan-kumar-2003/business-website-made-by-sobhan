@@ -1,0 +1,100 @@
+/* dark-mode.css */
+
+body.dark-mode {
+    --primary-color: #1a1a1a; /* Dark background for dark mode */
+    --dark-text-color: #ffffff; /* Light text for dark mode */
+    
+    /* Gradient Colors for Dark Mode */
+    --grad-start: #0d0d0d;
+    --grad-mid: #1a1a1a;
+    --grad-end: #2a2a2a;
+}
+
+.dark-mode .navbar,
+.dark-mode .car-card,
+.dark-mode #offer,
+.dark-mode footer,
+.dark-mode .form-control {
+    background-color: rgba(0, 0, 0, 0.3); /* Darker semi-transparent background */
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .navbar-brand {
+    color: var(--dark-text-color) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .nav-link {
+    color: var(--dark-text-color) !important;
+}
+
+.dark-mode .hero-title,
+.dark-mode .hero-subtitle,
+.dark-mode .section-title,
+.dark-mode .lead {
+    color: var(--dark-text-color);
+}
+
+.dark-mode .btn-primary {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--dark-text-color);
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.dark-mode .car-card {
+    color: var(--dark-text-color);
+}
+
+.dark-mode .car-card-title {
+    color: var(--dark-text-color);
+}
+
+.dark-mode .btn-outline-light {
+    border-color: var(--dark-text-color);
+    color: var(--dark-text-color);
+}
+
+.dark-mode .btn-outline-light:hover {
+    background-color: var(--dark-text-color);
+    color: var(--primary-color);
+}
+
+.dark-mode .coupon-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: var(--dark-text-color);
+}
+
+.dark-mode .coupon-code {
+    color: var(--dark-text-color);
+}
+
+.dark-mode #discount-message {
+    color: var(--dark-text-color);
+}
+
+.dark-mode .form-control {
+    color: var(--dark-text-color);
+}
+
+.dark-mode .form-control:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--dark-text-color);
+    color: var(--dark-text-color);
+}
+
+.dark-mode .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.dark-mode .form-select {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--dark-text-color);
+}
+
+.dark-mode .form-select:focus {
+    border-color: var(--dark-text-color);
+}

@@ -1,0 +1,242 @@
+/* ==== Google Gemini "Tropical Sunset" Vibrant Color Scheme ==== */
+:root {
+    --primary-color: #FFFFFF; /* Clean white for primary text and accents */
+    --dark-text-color: #1a1a1a; /* Very dark text for readability */
+    
+    /* Gradient Colors */
+    --grad-start: #ff8c00; /* Vibrant Orange */
+    --grad-mid: #ff69b4;   /* Hot Pink */
+    --grad-end: #4b0082;   /* Deep Indigo */
+
+    --font-heading: 'Lora', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    /* The main eye-catching gradient background */
+    background: linear-gradient(45deg, var(--grad-start), var(--grad-mid), var(--grad-end));
+    background-attachment: fixed; /* Keeps the gradient stationary on scroll */
+    background-size: cover;
+    color: var(--dark-text-color); /* Dark text for contrast */
+}
+
+/* --- Frosted Glass Effect for Containers --- */
+.navbar, .car-card, #offer, footer, .form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
+}
+
+.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif; /* The new, premium font */
+    font-size: 2.2rem !important; /* Slightly adjusted for the new font's feel */
+    font-weight: 900 !important; /* Extra bold for impact */
+    letter-spacing: 1px !important;
+    font-style: normal; /* Ensure it's not italic */
+    color: var(--dark-text-color) !important; /* Solid black color */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2); /* Subtle light shadow for pop */
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    /* transform: scale(1.03); -- Removed to prevent movement on hover */
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.4);
+}
+
+.centered-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link {
+    color: var(--primary-color) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.hero-section {
+    height: 100vh;
+    /* Remove background from hero, it will inherit from body */
+    background: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+.hero-subtitle {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-shadow: 0 3px 15px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: var(--dark-text-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+#fleet, #offer, #contact {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.car-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: var(--dark-text-color); /* Text inside card is now dark */
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.car-card-img-container {
+    overflow: hidden;
+}
+
+.car-card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.car-card:hover .car-card-img {
+    transform: scale(1.08);
+}
+
+.car-card-body {
+    padding: 1.5rem;
+}
+
+.car-card-title {
+    font-family: var(--font-heading);
+    color: var(--dark-text-color); /* Dark title for cards */
+}
+
+.btn-outline-light {
+    border-color: var(--dark-text-color);
+    color: var(--dark-text-color);
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--dark-text-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#offer {
+    background: none; /* Inherit body gradient */
+}
+
+.coupon-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px dashed var(--dark-text-color);
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.coupon-code {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--dark-text-color); /* Dark coupon code */
+    margin: 0;
+    text-shadow: none;
+}
+
+footer {
+    background: rgba(0,0,0,0.2); /* Darker frosted glass for footer */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--primary-color);
+}
+
+#discount-message {
+    font-weight: 500;
+    color: var(--dark-text-color);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Form Styling */
+.form-control {
+    color: var(--dark-text-color);
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--dark-text-color);
+    color: var(--dark-text-color);
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.form-select {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--dark-text-color);
+}
+
+.form-select:focus {
+    border-color: var(--dark-text-color);
+    box-shadow: none;
+}
+
+/* Make lead text more readable */
+.lead {
+    color: var(--primary-color);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
